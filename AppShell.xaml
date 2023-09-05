@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell 
+    x:Class="MauiAuth0App.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiAuth0App"
+    xmlns:page="clr-namespace:MauiAuth0App.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    >
+    <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+
+    <!--<Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <Grid RowDefinitions="68">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Grid.GestureRecognizers>
+                <Image Source="tab_settings.png"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               WidthRequest="40"
+                               HeightRequest="40"
+                        />
+
+            </Grid>
+        </DataTemplate>
+
+    </Shell.FlyoutFooterTemplate>-->
+
+    <TabBar>
+        <Tab Title="Home" Icon="tab_home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
+        </Tab>
+        <Tab Title="E-mail" Icon="mail.png">
+            <ShellContent ContentTemplate="{DataTemplate page:mail}"/>
+        </Tab>
+        <Tab Title="Settings" Icon="tab_settings.png">
+            <ShellContent ContentTemplate="{DataTemplate page:Settings}"/>
+        </Tab>
+        <Tab Title="Map 1" Icon="tab_map.png" >
+            <ShellContent ContentTemplate="{DataTemplate page:Map}"/>
+        </Tab>
+        <Tab Title="Map 2" Icon="tab_map.png">
+            <ShellContent ContentTemplate="{DataTemplate page:MapPage2}"/>
+        </Tab>
+        <Tab Title="Map 3" Icon="tab_map.png">
+            <ShellContent ContentTemplate="{DataTemplate page:MapPage3}"/>
+        </Tab>
+    </TabBar>
+    <!--<Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid
+                        RowDefinitions="68" HeightRequest="68">
+                <Image Source="{Binding FlyoutIcon}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               />
+            </Grid>
+        </DataTemplate>
+
+    </Shell.ItemTemplate>-->
+
+
+</Shell>
